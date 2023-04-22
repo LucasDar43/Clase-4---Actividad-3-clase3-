@@ -10,11 +10,12 @@
             Console.Write("Ingrese el valor de la Potencia ");
             int B = int.Parse(Console.ReadLine());
 
-            calcular(A, B);
+            int resultado = calcular(A, B);
 
+            Console.WriteLine("El resultado de " + A + " elevado a " + B + " es: " + resultado);
         }
 
-        static void calcular(int A, int B)
+        static int calcular(int A, int B)
         {
             int resultado = 1;
             int contador = 0;
@@ -25,7 +26,7 @@
                 contador++;
             }
 
-            Console.WriteLine("El resultado de " + A + " elevado a " + B + " es: " + resultado);
+            return resultado;
         }
     }
 }
